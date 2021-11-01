@@ -1,0 +1,12 @@
+<div class="login-page">
+    <div class="form">
+        <form   #userSignUpForm="ngForm" (ngSubmit)="editUser()" multipart="form-data" class="login-form" *ngIf="current_user">
+            <input type="text" name="first_name" [(ngModel)]="current_user.first_name" #userFirstName="ngModel" placeholder="lastname">
+            <input type="text" name="last_name" [(ngModel)]="current_user.last_name" #userLastName="ngModel" placeholder="Lastname">
+            <input type="text" name="user_age" [(ngModel)]="current_user.user_age" #userAge="ngModel" placeholder="Age">
+            <input type="text" name="user_password" [(ngModel)]="user_password" #userPassword="ngModel" placeholder="Password">
+            <button>Click To Edit</button>
+            <p class="message"> <a [routerLink]="['/user',current_user.user_id]">Go Back</a></p>
+        </form>
+    </div>
+  </div>
